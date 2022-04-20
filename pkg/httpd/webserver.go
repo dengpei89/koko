@@ -120,6 +120,7 @@ func (s *Server) ProcessTerminalWebsocket(ctx *gin.Context) {
 	}
 	currentUser := userValue.(*model.User)
 	systemUserId, _ := ctx.GetQuery("system_user_id")
+	logger.Error("这是我自己的方法")
 	s.runTTY(ctx, currentUser, targetParams.TargetType, targetParams.TargetId, systemUserId)
 }
 
