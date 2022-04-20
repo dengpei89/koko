@@ -34,7 +34,7 @@ RUN wget https://download.jumpserver.org/public/kubectl-linux-${TARGETARCH}.tar.
 
 COPY . .
 
-RUN cd utils && sh -ixeu build.sh
+RUN sh -ixeu utils/build.sh
 
 FROM debian:bullseye-slim
 ENV LANG en_US.utf8
